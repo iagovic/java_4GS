@@ -1,0 +1,7 @@
+<!DOCTYPE html><html xmlns:th="http://www.thymeleaf.org" th:replace="fragments/header :: header"><body><div th:replace="fragments/menu :: menu"></div>
+<h1>Dashboard Admin</h1><ul>
+    <li><a th:href="@{/admin/usuarios}">Gerenciar Usuários</a></li>
+    <li><a th:href="@{/admin/vagas}">Gerenciar Vagas</a></li>
+    <li><a th:href="@{/admin/cursos}">Gerenciar Cursos</a></li>
+    <li><a th:href="@{/admin/competencias}">Gerenciar Competências</a></li></ul>
+<div th:replace="fragments/footer :: footer"></div></body></html>

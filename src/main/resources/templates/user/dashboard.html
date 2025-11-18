@@ -1,0 +1,14 @@
+<!DOCTYPE html><html xmlns:th="http://www.thymeleaf.org" th:replace="fragments/header :: header"><body><div th:replace="fragments/menu :: menu"></div>
+<h1>Bem-vindo, <span th:text="${usuario.nome}">Usuário</span></h1>
+<p>Melhor vaga sugerida: <span th:text="${melhorVaga.titulo}"></span>
+    (<span th:text="${melhorVaga.compatibilidade}"></span>%)</p>
+<h2>Suas vagas:</h2><table>
+    <tr>
+        <th>Vaga</th>
+        <th>Compatibilidade</th>
+    </tr>
+    <tr th:each="vaga : ${todasVagas}">
+        <td th:text="${vaga.titulo}"></td>
+        <td th:text="${vaga.compatibilidade}"></td>
+    </tr></table>
+<div th:replace="fragments/footer :: footer"></div></body></html>

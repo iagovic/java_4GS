@@ -10,6 +10,15 @@ import jakarta.persistence.*;import lombok.*;import java.time.LocalDateTime;impo
 
     @Column(name = "SENHA_HASH", nullable = false, length = 255)private String senhaHash;
 
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
+    //criação da classe role posteriormente, deixando mais objetiva a classe User por enquanto
+    public enum Role{
+        ADMIN,
+        USER
+    };
+
     @Column(name = "CRIADO_EM")private LocalDateTime criadoEm;
 
     /** RELACIONAMENTOS **/@OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL)private Perfil perfil;
