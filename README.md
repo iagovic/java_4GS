@@ -8,24 +8,30 @@ Passo 1: Parar o MySQL
 Pare o serviço MySQL no XAMPP ou no gerenciador de serviços do Windows.
 
 Passo 2: Iniciar MySQL em modo skip-grant-tables
-```bash
-Abra o Prompt de Comando (cmd) e navegue até o diretório do MySQL:
-```
-cd C:\xampp\mysql\bin
-Executando o MySQL ignorando as permissoes
 
+Abra o Prompt de Comando (cmd) e navegue até o diretório do MySQL:
+```bash
+cd C:\xampp\mysql\bin
+```
+Executando o MySQL ignorando as permissoes
+```bash
 mysqld --skip-grant-tables
+```
 Deixe essa janela aberta ja que o MySQL esta rodando sem permissoes
 
 Passo 3: Abrir outro prompt e conectar ao MySQL
+```bash
 mysql -u root
+```
 
-mysql -u root
 Passo 4: Resetar a senha do root
 No prompt de comando rode
-
+```bash
 FLUSH PRIVILEGES;
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'senha123';
+```
 (crie exatamente essa senha pois é a que está definida no application properties)
 Passo 5: Criar banco de dados:
-CREATE DATABASE mottu_challenge;
+```bash
+CREATE DATABASE SkillBridge;
+```
