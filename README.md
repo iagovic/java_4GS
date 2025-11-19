@@ -8,8 +8,9 @@ Passo 1: Parar o MySQL
 Pare o serviço MySQL no XAMPP ou no gerenciador de serviços do Windows.
 
 Passo 2: Iniciar MySQL em modo skip-grant-tables
+```bash
 Abra o Prompt de Comando (cmd) e navegue até o diretório do MySQL:
-
+```
 cd C:\xampp\mysql\bin
 Executando o MySQL ignorando as permissoes
 
